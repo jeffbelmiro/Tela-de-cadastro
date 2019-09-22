@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/cadastro.css">
+    <script src="js/checkcpf.js"></script>
+	<title>Novo cadastro</title>
+</head>
+<body>
+
+<form id="cNewRegister">
+    
+    <fieldset id="UserIdData"><legend>Dados do usuário</legend>
+<label for="cTaxPayerID_BR">CPF:<br></label>
+        <input type="text" name="TaxPayerID_BR" id="cTaxPayerID_BR" on="checkCPF()" size="100%" maxlength="11" placeholder="Digite o seu CPF..."/><br>
+<label for="cBirthDate">DATA DE NASCIMENTO:<br></label>
+        <input type="date" name="BirthDate" id="cBirthDate" size="100%" maxlength="8" placeholder="Digite a sua data de nascimento"/><br>
+<label for="cName">NOME COMPLETO:<br></label>
+        <input type="text" name="Name" id="cName" size="100%" maxlength="50" placeholder="Digite seu nome completo..." size="60" maxlength="50"/><br>
+        <fieldset id="UserGenderData"><legend>Sexo:</legend>
+                    <input type="radio" name="Gender" id="cGenderF" /><label for="cGenderF">FEMININO</label>
+                    <input type="radio" name="Gender" id="cGenderM" /><label for="cGenderM">MASCULINO</label>
+        </fieldset>
+
+    </fieldset>
+    <fieldset id="UserAddressData"><legend>Dados de contato</legend>
+<label for="cEmail">E-MAIL:<br></label>
+        <input type="email" name="Email" id="cEmail" size="100%" maxlength="50" placeholder="Digite seu e-mail examplo@exemplo.com"><br>
+<label for="cTelephoneNumber">TELEFONE:<br></label>
+                <input type="tel" name="TelephoneNumber" id="cTelephoneNumber" size="100%" maxlength="11" placeholder="Digite seu telefone Ex.: 11998569124"/><br>
+<label for="cPostalCode_BR">CEP:<br></label>
+                <input type="text" name="PostalCode_BR" id="cPostalCode_BR" size="100%" maxlength="20" placeholder="Digite o CEP"><br>
+<label for="cAddress1">LOGRADOURO:<br></label>
+                <input type="text" name="Address1" id="cAddress1" size="100%" maxlength="50" placeholder="Ex.: Rua Exemplo, 34"><br>
+<label for="cAddress2">COMPLEMENTO:<br></label>
+                <input type="text" name="Address2" id="cAddress2" size="100%" maxlength="50"placeholder="Ex.: Bloco A, Apto 101"><br>
+<label for="cCityZone_BR">BAIRRO:<br></label>
+                <input type="text" name="CityZone_BR" id="cCityZone_BR" size="100%" maxlength="30"placeholder="Ex.: Centro"><br>
+<label for="cCity_BR">CIDADE:<br></label>
+                <input type="text" name="City_BR" id="cCity_BR" size="100%" maxlength="30" placeholder="Ex.: Cidade"><br>
+<label for="cState_BR" >ESTADO:<br></label>
+                <select name="State" id="cState_BR">
+                        <optgroup label="Região Norte">
+                                <option value="AC">Acre</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="PA">Pará</option>    
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                        </optgroup>
+                        <optgroup label="Região Sudeste">
+                                <option value="ES">Espírito Santo</option>
+                                <option value="MG">Minas Gerais</option>    
+                                <option value="RJ">Rio de Janeiro</option>    
+                                <option value="SP">São Paulo</option>
+                        </optgroup>
+                        <optgroup label="Região Sul">
+                                <option value="PR">Paraná</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="SC">Santa Catarina</option>
+                        </optgroup>
+                        <optgroup label="Região Centro-Oeste">
+                                <option value="DF">Distrito Federal</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="TO">Tocantins</option>
+                        </optgroup>
+                        <optgroup label="Região NOrdeste">
+                                <option value="AL">Alagoas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="SE">Sergipe</option>
+                        </optgroup>
+
+                </select>
+    </fieldset>
+
+
+</form>
+<br>
+<input type="button" id="cConfirmar" onclick="cadastrar()" value="Enviar" />
+<script src="js/cadastro.js"></script>
+
+</body>
+</html>
